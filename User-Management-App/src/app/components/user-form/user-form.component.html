@@ -1,0 +1,31 @@
+<section>
+  <h2>{{ id ? 'Edit User' : 'Add User' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="save()" class="form">
+    <label>
+      <span>Name</span>
+      <input formControlName="name" type="text" />
+      <small *ngIf="form.controls.name.touched && form.controls.name.invalid">
+        Name is required (min 3)
+      </small>
+    </label>
+
+    <label>
+      <span>Email</span>
+      <input formControlName="email" type="email" />
+      <small *ngIf="form.controls.email.touched && form.controls.email.invalid">
+        Valid email required
+      </small>
+    </label>
+
+    <label><span>Username</span><input formControlName="username" /></label>
+    <label><span>Phone</span><input formControlName="phone" /></label>
+    <label><span>Website</span><input formControlName="website" /></label>
+    <label><span>Company</span><input formControlName="companyName" /></label>
+
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid">Save</button>
+      <a routerLink="/users">Cancel</a>
+    </div>
+  </form>
+</section>

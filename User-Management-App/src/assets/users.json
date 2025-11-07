@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "leanne",
+    "email": "leanne@example.com",
+    "phone": "1-770-736-8031",
+    "website": "leanne.dev",
+    "company": { "name": "Romagna LLC" }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "ervin",
+    "email": "ervin@example.com",
+    "phone": "010-692-6593",
+    "website": "erv.in",
+    "company": { "name": "Howell Group" }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "clementine",
+    "email": "clementine@example.com",
+    "phone": "1-463-123-4447",
+    "website": "clem.io",
+    "company": { "name": "Clementine LLC" }
+  }
+]

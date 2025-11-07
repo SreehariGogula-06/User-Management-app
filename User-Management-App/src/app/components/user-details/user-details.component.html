@@ -1,0 +1,16 @@
+<section>
+  <a routerLink="/users">← Back</a>
+
+  <ng-container *ngIf="svc.getById(id) as u; else notFound">
+    <h2>{{ u.name }}</h2>
+    <p><strong>Email:</strong> {{ u.email }}</p>
+    <p><strong>Username:</strong> {{ u.username || '—' }}</p>
+    <p><strong>Phone:</strong> {{ u.phone || '—' }}</p>
+    <p><strong>Website:</strong> {{ u.website || '—' }}</p>
+    <p><strong>Company:</strong> {{ u.company?.name || '—' }}</p>
+  </ng-container>
+
+  <ng-template #notFound>
+    <p>User not found.</p>
+  </ng-template>
+</section>

@@ -1,0 +1,31 @@
+<section>
+  <div class="toolbar">
+    <input
+  #searchInput
+  type="search"
+  placeholder="Search users..."
+  [value]="svc.searchTerm()"
+  (input)="onSearch($event)"
+/>
+
+    <a routerLink="/add" class="btn">+ Add User</a>
+  </div>
+
+  <p *ngIf="svc.loading()">Loading...</p>
+  <p *ngIf="svc.error()">{{ svc.error() }}</p>
+
+  <ul *ngIf="!svc.loading() && !svc.error()">
+  <li *ngFor="let u of svc.filteredUsers()">
+    <div class="user-info">
+      <a [routerLink]="['/details', u.id]" class="user-name">{{ u.name }}</a>
+      <span class="user-email">{{ u.email }}</span>
+    </div>
+
+    <div class="actions">
+      <a [routerLink]="['/edit', u.id]">Edit</a>
+      <button (click)="confirmDelete(u.id)">Delete</button>
+    </div>
+  </li>
+</ul>
+
+</section>

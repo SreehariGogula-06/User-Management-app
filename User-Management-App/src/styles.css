@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #111827;
+}
+
+/* Buttons */
+button, .btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover, .btn:hover {
+  background: #1d4ed8;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tables, lists, etc. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
