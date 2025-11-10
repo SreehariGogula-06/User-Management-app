@@ -35,7 +35,7 @@ section {
 }
 
 .toolbar .btn {
-  background: #2563eb;
+  background: #062568ff;
   color: #fff;
   padding: 0.6rem 1rem;
   border-radius: 8px;
@@ -45,7 +45,7 @@ section {
 }
 
 .toolbar .btn:hover {
-  background: #1d4ed8;
+  background: green;
 }
 
 /* --- User List --- */
@@ -96,6 +96,7 @@ li:hover {
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+  color: #062568ff;
 }
 
 /* --- Buttons --- */

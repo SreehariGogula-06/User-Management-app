@@ -1,5 +1,5 @@
 <section>
-  <h2>{{ id ? 'Edit User' : 'Add User' }}</h2>
+  <h4>{{ id ? 'Edit User' : 'Add User' }}</h4>
 
   <form [formGroup]="form" (ngSubmit)="save()" class="form">
     <label>
@@ -25,7 +25,7 @@
 
     <div class="actions">
       <button type="submit" [disabled]="form.invalid">Save</button>
-      <a routerLink="/users">Cancel</a>
+      <button class ="cancel-button" routerLink="/users">Cancel</button>
     </div>
   </form>
 </section>
