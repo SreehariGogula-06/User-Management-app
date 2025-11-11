@@ -1,8 +1,7 @@
-/* --- Header --- */
+
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
   background: linear-gradient(90deg, rgb(11, 25, 31), rgb(6, 28, 75));
   color: #fff;
@@ -13,42 +12,15 @@
   font-size: 1.5rem;
   margin: 0;
   letter-spacing: 0.5px;
+  padding-left: 0%;
 }
 
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.2s ease-in-out;
-}
 
-.nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #fff;
-  transition: width 0.25s ease-in-out;
-}
 
-.nav a:hover::after,
-.nav a.active::after {
-  width: 100%;
-}
-
-.nav a:hover {
-  color: #e0e7ff;
-}
-
-/* --- Layout with sidebar --- */
 .layout {
   display: flex;
   align-items: flex-start;
-  min-height: 100vh;  /* ensures full viewport height */
+  min-height: 100vh;  
 }
 
 .container {
@@ -59,17 +31,6 @@
   background-color: #f9fafb;
 }
 
-/* --- Footer --- */
-.footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #f3f4f6;
-  border-top: 1px solid #e5e7eb;
-  color: #6b7280;
-}
-
-/* --- Responsive --- */
 @media (max-width: 600px) {
   .header {
     flex-direction: column;

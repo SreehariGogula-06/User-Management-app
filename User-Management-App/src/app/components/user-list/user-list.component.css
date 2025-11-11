@@ -1,4 +1,4 @@
-/* --- Overall section --- */
+
 section {
   max-width: 900px;
   margin: 2rem auto;
@@ -8,7 +8,6 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Toolbar --- */
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -35,9 +34,9 @@ section {
 }
 
 .toolbar .btn {
-  background: #062568ff;
+   background: linear-gradient(90deg, rgb(11, 25, 31), rgb(6, 28, 75));
   color: #fff;
-  padding: 0.6rem 1rem;
+  padding: 0.45rem 1rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
@@ -48,7 +47,7 @@ section {
   background: green;
 }
 
-/* --- User List --- */
+
 ul {
   list-style: none;
   padding: 0;
@@ -74,7 +73,6 @@ li:hover {
   transform: translateY(-1px);
 }
 
-/* --- User Info & Actions Alignment --- */
 .user-info {
   display: flex;
   flex-direction: column;
@@ -99,9 +97,22 @@ li:hover {
   color: #062568ff;
 }
 
-/* --- Buttons --- */
-button {
-  background: #dc2626;
+.edit-button:hover{
+  background: blue !important;
+  color: #fff;
+}
+.edit-button{
+  background: linear-gradient(90deg, rgb(11, 25, 31), rgb(6, 28, 75));
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.delete-button{
+    background: grey;
   color: #fff;
   border: none;
   padding: 0.45rem 0.8rem;
@@ -111,9 +122,10 @@ button {
   transition: background 0.2s ease-in-out;
 }
 
-button:hover {
+.delete-button:hover{
   background: #b91c1c;
 }
+
 
 a {
   color: #2563eb;

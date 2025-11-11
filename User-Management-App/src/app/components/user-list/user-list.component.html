@@ -22,8 +22,8 @@
     </div>
 
     <div class="actions">
-      <a [routerLink]="['/edit', u.id]">Edit</a>
-      <button (click)="confirmDelete(u.id)">Delete</button>
+      <button class="edit-button" [routerLink]="['/edit', u.id]">Edit</button>
+      <button class="delete-button" (click)="confirmDelete(u.id)">Delete</button>
     </div>
   </li>
 </ul>

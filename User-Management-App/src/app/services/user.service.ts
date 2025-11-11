@@ -7,13 +7,13 @@ import { User } from '../models/user.model';
 export class UserService {
   private readonly url = 'https://jsonplaceholder.typicode.com/users';
 
-  // signals for state management
+
   users = signal<User[]>([]);
   loading = signal(false);
   error = signal<string | null>(null);
   searchTerm = signal('');
 
-  // computed for live filtering
+
   filteredUsers = computed(() => {
     const term = this.searchTerm().toLowerCase().trim();
     if (!term) return this.users();
@@ -25,7 +25,7 @@ export class UserService {
   });
 
   constructor(private http: HttpClient) {
-    // watch for errors
+
     effect(() => {
       if (this.error()) console.error('UserService error:', this.error());
     });
@@ -44,7 +44,6 @@ export class UserService {
     }
   }
 
-  // ...rest of the code remains the same
 
 
   async addUser(user: Omit<User, 'id'>) {

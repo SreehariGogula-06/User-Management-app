@@ -40,3 +40,7 @@ small {
 .cancel-button{
   background-color: grey;
 }
+
+.mandatory-mark{
+  color: red;
+}

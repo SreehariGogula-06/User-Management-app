@@ -22,7 +22,7 @@ export class UserFormComponent implements OnInit {
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     username: [''],
-    phone: [''],
+    phone: ['',[Validators.required, Validators.minLength(10)]],
     website: [''],
     companyName: ['']
   });
@@ -55,7 +55,7 @@ export class UserFormComponent implements OnInit {
         name: v.name!,
         email: v.email!,
         username: v.username || undefined,
-        phone: v.phone || undefined,
+        phone: v.phone!,
         website: v.website || undefined,
         company: v.companyName ? { name: v.companyName } : undefined
       });
@@ -64,7 +64,7 @@ export class UserFormComponent implements OnInit {
         name: v.name!,
         email: v.email!,
         username: v.username || undefined,
-        phone: v.phone || undefined,
+        phone: v.phone!,
         website: v.website || undefined,
         company: v.companyName ? { name: v.companyName } : undefined
       });

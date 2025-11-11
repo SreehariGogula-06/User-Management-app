@@ -3,7 +3,7 @@
 
   <form [formGroup]="form" (ngSubmit)="save()" class="form">
     <label>
-      <span>Name</span>
+      <span>Name <span class="mandatory-mark">*</span></span>
       <input formControlName="name" type="text" />
       <small *ngIf="form.controls.name.touched && form.controls.name.invalid">
         Name is required (min 3)
@@ -11,21 +11,29 @@
     </label>
 
     <label>
-      <span>Email</span>
+      <span>Email <span class="mandatory-mark">*</span></span>
       <input formControlName="email" type="email" />
       <small *ngIf="form.controls.email.touched && form.controls.email.invalid">
         Valid email required
       </small>
     </label>
 
-    <label><span>Username</span><input formControlName="username" /></label>
-    <label><span>Phone</span><input formControlName="phone" /></label>
-    <label><span>Website</span><input formControlName="website" /></label>
-    <label><span>Company</span><input formControlName="companyName" /></label>
+    <label><span>Username </span><input formControlName="username" /></label>
+
+    <label>
+      <span>Phone Number <span class="mandatory-mark">*</span></span>
+      <input formControlName="phone" type="text" />
+      <small *ngIf="form.controls.phone.touched && form.controls.phone.invalid">
+        Valid phone Number required
+      </small>
+    </label>
+
+    <label><span>Website </span><input formControlName="website" /></label>
+    <label><span>Company </span><input formControlName="companyName" /></label>
 
     <div class="actions">
       <button type="submit" [disabled]="form.invalid">Save</button>
-      <button class ="cancel-button" routerLink="/users">Cancel</button>
+      <button class="cancel-button" routerLink="/users">Cancel</button>
     </div>
   </form>
 </section>
